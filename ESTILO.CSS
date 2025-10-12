@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 50, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 10;
+}
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #00b4ff;
+}
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #00b4ff;
+}
+
+/* HERO / SLIDER */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+.overlay h1 {
+    font-size: 3rem;
+}
+.overlay p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+.btn {
+    background: #00b4ff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #0092d1;
+}
+
+/* BUSCADOR */
+.buscador {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+}
+.buscador input, .buscador button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.buscador button {
+    background: #00b4ff;
+    color: white;
+    border: none;
+}
+.buscador button:hover {
+    background: #008ecc;
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+h2 {
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+/* PAQUETES */
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+}
+.card h3 {
+    color: #00b4ff;
+    margin-top: 10px;
+}
+.precio {
+    color: #003366;
+    font-weight: bold;
+}
+
+/* GALERÍA */
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.galeria img {
+    width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+#video iframe {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* BENEFICIOS */
+.beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.beneficio {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTACTO */
+#contacto form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#contacto input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contacto button {
+    background: #00b4ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#contacto button:hover {
+    background: #008ecc;
+}
+
+/* FOOTER */
+footer {
+    background: #00264d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .buscador {
+        flex-direction: column;
+    }
+    .grid, .beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+}

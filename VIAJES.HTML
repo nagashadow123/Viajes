@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Horizonte Viajes - Vive tu próxima aventura</title>
+    <link rel="stylesheet" href="ESTILO.CSS">
+</head>
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <header>
+        <div class="logo">NuevoHorizonte<span>Viajes</span></div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO / CARRUSEL -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image:url('https://picsum.photos/1920/900?travel1')"></div>
+            <div class="slide" style="background-image:url('https://picsum.photos/1920/900?travel2')"></div>
+            <div class="slide" style="background-image:url('https://picsum.photos/1920/900?travel3')"></div>
+        </div>
+        <div class="overlay">
+            <h1>Descubre el mundo con nosotros</h1>
+            <p>Paquetes exclusivos, destinos soñados y la mejor atención</p>
+            <a href="#paquetes" class="btn">Ver Paquetes</a>
+        </div>
+
+        <!-- Buscador sobre el banner -->
+        <div class="buscador">
+            <form>
+                <input type="text" placeholder="Origen">
+                <input type="text" placeholder="Destino">
+                <input type="date">
+                <input type="date">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PAQUETES DESTACADOS -->
+    <section id="paquetes">
+        <h2>Paquetes Destacados</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/400/250?random=1" alt="Europa">
+                <h3>Europa Clásica</h3>
+                <p>16 días / 15 noches desde Lima</p>
+                <p class="precio">US$ 3,899</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/400/250?random=2" alt="Tailandia">
+                <h3>Tailandia con Phuket</h3>
+                <p>10 días / 9 noches con vuelos</p>
+                <p class="precio">US$ 4,499</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/400/250?random=3" alt="Caribe">
+                <h3>Caribe All Inclusive</h3>
+                <p>7 noches en resort 5⭐</p>
+                <p class="precio">US$ 2,499</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE DESTINOS -->
+    <section id="destinos">
+        <h2>Destinos Populares</h2>
+        <div class="galeria">
+            <img src="https://picsum.photos/300/200?random=11" alt="Destino 1">
+            <img src="https://picsum.photos/300/200?random=12" alt="Destino 2">
+            <img src="https://picsum.photos/300/200?random=13" alt="Destino 3">
+            <img src="https://picsum.photos/300/200?random=14" alt="Destino 4">
+            <img src="https://picsum.photos/300/200?random=15" alt="Destino 5">
+        </div>
+    </section>
+
+    <!-- VIDEO PROMOCIONAL -->
+    <section id="video">
+        <h2>Explora el mundo con nosotros ✈️</h2>
+        <div class="video-container">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+                title="Video de viajes"
+                frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="beneficios">
+            <div class="beneficio">
+                <h3>🌎 Experiencia</h3>
+                <p>Más de 15 años organizando viajes inolvidables.</p>
+            </div>
+            <div class="beneficio">
+                <h3>💳 Pagos Seguros</h3>
+                <p>Compra online con total confianza.</p>
+            </div>
+            <div class="beneficio">
+                <h3>🕐 Atención Personalizada</h3>
+                <p>Soporte y asesoría 24/7 en todo momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje..." rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2025 NuevoHorizonteViajes | Todos los derechos reservados | Lima - Perú</p>
+    </footer>
+
+    <script>
+        // Carrusel automático
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        function cambiarSlide() {
+            slides.forEach(s => s.classList.remove('active'));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        setInterval(cambiarSlide, 5000);
+    </script>
+
+</body>
+</html>
